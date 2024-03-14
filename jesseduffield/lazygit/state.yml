@@ -1,11 +1,11 @@
 lastupdatecheck: 0
 recentrepos:
 - /home/dav/.config
+- /home/dav/.config/nvim
 - /home/dav/Github/reserve
 - /mnt/d/WSL-Share/SheinSpyder
 - /home/dav/Downloads/.config
 - /mnt/d/WSL-Share/shein2amz
-- /home/dav/.config/nvim
 - /home/dav/Downloads/tmuxen
 startuppopupversion: 5
 customcommandshistory: []
