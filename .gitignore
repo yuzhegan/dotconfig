@@ -52,11 +52,7 @@
 .tmux.conf
 .Xmodmap
 !/fcitx5/
-!/kitty/*
-!/kitty/kitty.conf
-!/kitty/custom-hints.py
-!/kitty/current-theme.conf
-
+!/kitty
 
 jesseduffield/lazynpm/state.yml
 
