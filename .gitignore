@@ -51,6 +51,7 @@
 /.tmux.conf
 /.Xmodmap
 !/kitty
+!/lf
 
 jesseduffield/lazynpm/state.yml
 
