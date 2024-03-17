@@ -47,11 +47,9 @@
 !/yazi/plugins/bookmarks.yazi/*
 !/pudb/*
 !/pudb/pudb.cfg
-!/bin/
 !/lmk
-.tmux.conf
-.Xmodmap
-!/fcitx5/
+/.tmux.conf
+/.Xmodmap
 !/kitty
 
 jesseduffield/lazynpm/state.yml

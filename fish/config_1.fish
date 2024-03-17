@@ -1,12 +1,12 @@
-# function time_awm --description="Bash time_awm function"
-#   command time_awm --portability $argv
-# end
+function time_awm --description="Bash time_awm function"
+  command time_awm --portability $argv
+end
 
 
 #解决内存占用过高问题  https://zhuanlan.zhihu.com/p/166102340?ivk_sa=1024320u
-# if not ps -ef | grep cron | grep -v grep | string length -q
-#     sudo /etc/init.d/cron start > /dev/null ^&1
-# end
+if not ps -ef | grep cron | grep -v grep | string length -q
+    sudo /etc/init.d/cron start > /dev/null ^&1
+end
 
 set -g -x RANGER_LOAD_DEFAULT_RC FALSE
 set fish_greeting ""
