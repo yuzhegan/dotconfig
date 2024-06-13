@@ -2,8 +2,11 @@ lastupdatecheck: 0
 recentrepos:
 - /home/dav/.config
 - /home/dav/.config/nvim
-- /home/dav/tmuxen
+- /home/dav/Github/translate-im
+- /home/dav/Github/ozon_async_process
+- /mnt/d/Arch22
 - /home/dav/Github/reserve
+- /home/dav/tmuxen
 - /mnt/d/WSL-Share/SheinSpyder
 - /mnt/d/WSL-Share/shein2amz
 startuppopupversion: 5

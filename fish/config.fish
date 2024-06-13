@@ -62,3 +62,18 @@ function r
     # 删除临时文件
     rm -f -- "$tmp"
 end
+function j
+    # 创建一个临时文件
+
+    set tmp (mktemp -t "joshto-cwd.XXXXX")
+    # 调用yazi命令
+    joshuto $argv --cwd-file="$tmp"
+    # 读取临时文件内容
+    set cwd (cat -- "$tmp")
+    # 检查目录是否需要改变
+    if test -n "$cwd" -a "$cwd" != "$PWD"
+        cd -- "$cwd"
+    end
+    # 删除临时文件
+    rm -f -- "$tmp"
+end
