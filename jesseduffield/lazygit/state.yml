@@ -1,15 +1,13 @@
-lastupdatecheck: 0
+lastupdatecheck: 1719700931
 recentrepos:
-- /home/dav/.config
+- /home/dav/Github/ozonTools
+- /home/dav/apps/nvim
 - /home/dav/.config/nvim
-- /home/dav/Github/translate-im
-- /home/dav/Github/ozon_async_process
-- /mnt/d/Arch22
-- /home/dav/Github/reserve
-- /home/dav/tmuxen
-- /mnt/d/WSL-Share/SheinSpyder
-- /mnt/d/WSL-Share/shein2amz
+- /home/dav/.local/share/nvim/lazy/bufferline.nvim
+- /home/dav/.local/share/nvim/lazy/vim-snippets
+- /home/dav/Desktop/theniceboy/dwm
 startuppopupversion: 5
-customcommandshistory: []
-hidecommandlog: true
+customcommandshistory:
+- ""
+hidecommandlog: false
 ignorewhitespaceindiffview: false
