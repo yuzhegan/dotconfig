@@ -15,7 +15,7 @@ case "$(uname -a)" in
 esac
 
 cleanup() {
-    exec 3>&-
+    run 3>&-
     ueberzugpp cmd -s "$UB_SOCKET" -a exit
 }
 

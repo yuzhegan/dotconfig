@@ -27,9 +27,15 @@ set -Ux DISPLAY (cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}
 set -x GTK_IM_MODULE fcitx
 set -x QT_IM_MODULE fcitx
 set -x XMODIFIERS @im=fcitx
+export ANTHROPIC_API_KEY=sk-vxai76FlE154fhnx5963819d87164b15B87bFbD61fE70881
+export OPENAI_API_KEY=sk-vxai76FlE154fhnx5963819d87164b15B87bFbD61fE70881
+export XDG_RUNTIME_DIR="/tmp/"
 
 
 source ~/.profile
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 
 
 
@@ -53,6 +59,21 @@ function r
     set tmp (mktemp -t "yazi-cwd.XXXXX")
     # 调用yazi命令
     yazi $argv --cwd-file="$tmp"
+    # 读取临时文件内容
+    set cwd (cat -- "$tmp")
+    # 检查目录是否需要改变
+    if test -n "$cwd" -a "$cwd" != "$PWD"
+        cd -- "$cwd"
+    end
+    # 删除临时文件
+    rm -f -- "$tmp"
+end
+function j
+    # 创建一个临时文件
+
+    set tmp (mktemp -t "joshto-cwd.XXXXX")
+    # 调用yazi命令
+    joshuto $argv --cwd-file="$tmp"
     # 读取临时文件内容
     set cwd (cat -- "$tmp")
     # 检查目录是否需要改变

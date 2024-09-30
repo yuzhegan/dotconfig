@@ -342,16 +342,16 @@ local GLOBAL_PARENT_DOUBLE_CANDS = {
 
 -- TODO: the async jump is too fast, the current folder may cannot be found
 
--- use g + <key> to exec yazi cmd
+-- use g + <key> to run yazi cmd
 local GO_CANDS = {
-	-- { on = { "g", "c" },       exec = "cd ~/.config",     desc = "Go to config" },
-	-- { on = { "g", "r" },       exec = "cd /",          desc = "Go to /" },
-	-- { on = { "g", "d" },       exec = "cd ~/down",          desc = "Go to down" },
-	-- { on = { "g", "i" },       exec = "cd ~/Images",          desc = "Go to Image" },
-	-- { on = { "g", "f" },       exec = "cd ~/file",          desc = "Go to file" },
-	-- { on = { "g", "u" },       exec = "cd /media/UUI",          desc = "Go to U" },
-	-- { on = { "g", "l" },       exec = "cd ~/_install",          desc = "Go to install" },
-	-- { on = { "g", "h" },       exec = "cd ~/",          		desc = "Go to  home" },
+	-- { on = { "g", "c" },       run = "cd ~/.config",     desc = "Go to config" },
+	-- { on = { "g", "r" },       run = "cd /",          desc = "Go to /" },
+	-- { on = { "g", "d" },       run = "cd ~/down",          desc = "Go to down" },
+	-- { on = { "g", "i" },       run = "cd ~/Images",          desc = "Go to Image" },
+	-- { on = { "g", "f" },       run = "cd ~/file",          desc = "Go to file" },
+	-- { on = { "g", "u" },       run = "cd /media/UUI",          desc = "Go to U" },
+	-- { on = { "g", "l" },       run = "cd ~/_install",          desc = "Go to install" },
+	-- { on = { "g", "h" },       run = "cd ~/",          		desc = "Go to  home" },
 }
 
 
@@ -796,7 +796,7 @@ return {
 			if cand > (current_entry_num + parent_entry_num + preview_entry_num) and cand <= (current_entry_num + parent_entry_num + preview_entry_num + go_num) then
 				local go_line = cand - current_entry_num - parent_entry_num - preview_entry_num
 
-				local cmd = split_yazi_cmd_arg(GO_CANDS[go_line].exec)
+				local cmd = split_yazi_cmd_arg(GO_CANDS[go_line].run)
 				ya.manager_emit(cmd[1], { cmd[2] }) -- Bug: async action may let 303 unkonw under cursor file
 				again_global(state)
 				return

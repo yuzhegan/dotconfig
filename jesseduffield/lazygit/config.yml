@@ -6,8 +6,10 @@ git:
   skiphookprefix: WIP
   paging:
     colorArg: always
-    pager: delta --dark --paging=never --24-bit-color=never -- --theme="OneHalfDark"
+    pager: delta --dark --paging=never --24-bit-color=never --syntax-theme="OneHalfDark"
 gui:
+  border: "rounded"
+  showBottomLine: true
   commitlength:
     show: true
   mouseevents: false
@@ -23,36 +25,50 @@ gui:
     optionsTextColor:
       - blue
     selectedLineBgColor:
-      - default
+      - reverse
     selectedRangeBgColor:
       - blue
 reporting: "off"
 splashupdatesindex: 0
+quitOnTopLevelReturn: true
 startuppopupversion: 1
+nerdFontsVersion: "3"
+showIcons: true
+showFileIcons: true
 keybinding:
   universal:
-    prevItem-alt: 'k'
-    nextItem-alt: 'j'
-    prevBlock-alt: 'h'
-    nextBlock-alt: 'l'
+    return: '<esc>'
+    prevItem-alt: 'u'
+    nextItem-alt: 'e'
+    prevBlock-alt: 'n'
+    nextBlock-alt: 'i'
     nextMatch: '='
     prevMatch: '-'
-    new: 'n'
-    edit: 'e'
+    new: 'k'
+    edit: 'o'
     openFile: 'O'
-    scrollUpMain-alt1: 'K'
-    scrollDownMain-alt1: 'J'
-    scrollUpMain-alt2: '<c-k>'
-    scrollDownMain-alt2: '<c-j>'
-    undo: 'u'
+    scrollUpMain-alt1: 'U'
+    scrollDownMain-alt1: 'E'
+    scrollUpMain-alt2: '<c-u>'
+    scrollDownMain-alt2: '<c-e>'
+    undo: 'l'
     redo: '<c-r>'
     diffingMenu: 'M'
     filteringMenu: '<c-f>'
+    toggleRangeSelect: v
+
   files:
     ignoreFile: 'I'
+    IgnoreOrExcludeFile: 'I'
   commits:
-    moveDownCommit: '<c-j>'
-    moveUpCommit: '<c-k>'
+    moveDownCommit: '<c-e>'
+    moveUpCommit: '<c-u>'
+    openInBrowser: o
+    viewBisectOptions: b
+    startInteractiveRebase: O
+    cherryPickCopy: C
+    pasteCommits: V
+
   branches:
     viewGitFlowOptions: 'I'
     setUpstream: 'U'

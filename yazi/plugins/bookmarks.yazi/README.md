@@ -17,28 +17,50 @@ git clone https://github.com/dedukun/bookmarks.yazi.git ~/.config/yazi/plugins/b
 git clone https://github.com/dedukun/bookmarks.yazi.git %AppData%\yazi\config\plugins\bookmarks.yazi
 ```
 
-## Usage
+## Configuration
 
 Add this to your `keymap.toml`:
 
 ```toml
 [[manager.prepend_keymap]]
 on = [ "m" ]
-exec = "plugin bookmarks --args=save"
+run = "plugin bookmarks --args=save"
 desc = "Save current position as a bookmark"
 
 [[manager.prepend_keymap]]
 on = [ "'" ]
-exec = "plugin bookmarks --args=jump"
+run = "plugin bookmarks --args=jump"
 desc = "Jump to a bookmark"
 
 [[manager.prepend_keymap]]
 on = [ "b", "d" ]
-exec = "plugin bookmarks --args=delete"
+run = "plugin bookmarks --args=delete"
 desc = "Delete a bookmark"
 
 [[manager.prepend_keymap]]
 on = [ "b", "D" ]
-exec = "plugin bookmarks --args=delete_all"
+run = "plugin bookmarks --args=delete_all"
 desc = "Delete all bookmarks"
 ```
+
+---
+
+Additionally you can enable notifications by calling the plugin's `setup` function in Yazi's `init.lua`, i.e. `~/.config/yazi/init.lua`.
+The following are the default configurations:
+
+```lua
+-- ~/.config/yazi/init.lua
+require("bookmarks"):setup({
+	notify = {
+		enable = false,
+		timeout = 1,
+		message = {
+			new = "New bookmark '<key>' -> '<folder>'",
+			delete = "Deleted bookmark in '<key>'",
+			delete_all = "Deleted all bookmarks",
+		},
+	},
+})
+```
+
+For the `new` and `delete` messages, you can use `<key>` and `<folder>`, which will be replaced by the respective new/deleted bookmark's associated key and folder.

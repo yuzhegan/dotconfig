@@ -1,14 +1,12 @@
-lastupdatecheck: 0
+lastupdatecheck: 1719700931
 recentrepos:
 - /home/dav/.config
-- /home/dav/lunvim
 - /home/dav/.config/nvim
-- /home/dav/Github/reserve
-- /mnt/d/WSL-Share/SheinSpyder
-- /home/dav/Downloads/.config
-- /mnt/d/WSL-Share/shein2amz
-- /home/dav/Downloads/tmuxen
+- /home/dav/.local/share/nvim/lazy/bufferline.nvim
+- /home/dav/.local/share/nvim/lazy/telescope-fzf-native.nvim
+- /home/dav/.local/share/nvim/lazy/vim-snippets
 startuppopupversion: 5
-customcommandshistory: []
+customcommandshistory:
+- ""
 hidecommandlog: false
 ignorewhitespaceindiffview: false
