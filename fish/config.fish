@@ -30,6 +30,14 @@ set -x XMODIFIERS @im=fcitx
 export ANTHROPIC_API_KEY=sk-vxai76FlE154fhnx5963819d87164b15B87bFbD61fE70881
 export OPENAI_API_KEY=sk-vxai76FlE154fhnx5963819d87164b15B87bFbD61fE70881
 export XDG_RUNTIME_DIR="/tmp/"
+export LIBGL_ALWAYS_SOFTWARE=1
+export TMUX="/tmp/tmux-1000/default"
+# export TMUX_TMPDIR=/tmp
+export XDG_RUNTIME_DIR=/mnt/wslg/runtime-dir
+export WAYLAND_DISPLAY=wayland-0
+
+
+
 
 
 source ~/.profile
